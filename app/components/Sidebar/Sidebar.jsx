@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Home, Info, ClipboardList, Menu, X } from 'lucide-react'
+import { IconHome, IconInfoCircle, IconClipboardList, IconMenu2, IconX } from "@tabler/icons-react";
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa6'
 import { SiFiverr } from "react-icons/si"
 import './Sidebar.css'
@@ -13,9 +13,9 @@ export default function Sidebar() {
 
     // Example navigation items
     const navItems = [
-        { name: 'Home', path: '/', icon: <Home className="w-5 h-5" /> },
-        { name: 'About', path: '/about', icon: <Info className="w-5 h-5" /> },
-        { name: 'Projects', path: '/projects', icon: <ClipboardList className="w-5 h-5" /> },
+        { name: 'Home', path: '/', icon: <IconHome className="w-5 h-5" /> },
+        { name: 'About', path: '/about', icon: <IconInfoCircle className="w-5 h-5" /> },
+        { name: 'Projects', path: '/projects', icon: <IconClipboardList className="w-5 h-5" /> },
     ]
 
     const socialMedia = [
@@ -65,7 +65,7 @@ export default function Sidebar() {
                             <li key={item.path}>
                                 <Link
                                     href={item.path}
-                                    className={`flex items-center text-lg gap-2 px-4 py-2 rounded-full hover:bg-gray-700 transition-colors
+                                    className={`flex items-center text-lg gap-2 px-4 py-2 rounded-full hover:bg-gray-700 hover:text-white transition-all
                     ${activeSection === item.path && 'bg-violet-800 text-white'}`}
                                     onClick={() => setActiveSection(item.path)}
                                 >
@@ -98,7 +98,7 @@ export default function Sidebar() {
                     className={`ham-burger-btn absolute top-5 bg-gray-200 dark:bg-gray-800 p-2 rounded-md hover:bg-gray-700 hidden ${isSidebarOpen ? 'right-3' : '-right-13'}`}
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                 >
-                    {isSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    {isSidebarOpen ? <IconX className="w-6 h-6" /> : <IconMenu2 className="w-6 h-6" />}
                 </button>
             </aside>
         </>

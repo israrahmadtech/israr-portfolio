@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { IconSun, IconMoon } from '@tabler/icons-react';
 
 export default function DarkModeToggle() {
     const [dark, setDark] = useState(true);
@@ -24,7 +24,7 @@ export default function DarkModeToggle() {
                 className={`w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300
                     ${dark ? 'translate-x-8' : 'translate-x-0'}`}
             >
-                {dark ? <Moon className="w-4 h-4 text-violet-500 m-1" /> : <Sun className="w-4 h-4 text-yellow-400 m-1" />}
+                {dark ? <IconMoon className="w-4 h-4 text-violet-500 m-1" /> : <IconSun className="w-4 h-4 text-yellow-400 m-1" />}
             </span>
         </button>
     );

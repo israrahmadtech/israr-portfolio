@@ -31,11 +31,10 @@ export default function CursorEffect() {
             {offsets.map((offset, index) => (
                 <div
                     key={index}
-                    className="absolute w-0 h-0 -z-1"
+                    className="absolute w-0 h-0 -z-1 shadow-[0_0_130px_100px_#5e0ec011] dark:shadow-[0_0_110px_100px_#5e0ec011]"
                     style={{
                         left: `${cursorPos.x + offset.x}px`,
                         top: `${cursorPos.y + offset.y}px`,
-                        boxShadow: '0 0 110px 100px #5e0ec011',
                         transform: 'translate(-50%, -50%)',
                     }}
                 />

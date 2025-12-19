@@ -1,11 +1,16 @@
-export default async function Page() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await res.json();
+import React from "react";
+import AboutHero from "../components/AboutHero/AboutHero";
+import { JourneySection } from "../components/JourneySection/JourneySection";
 
+function AboutPage() {
   return (
-    <div>
-      <h1>Users</h1>
-      <pre>{JSON.stringify(users, null, 2)}</pre>
+    <div id="about">
+      <AboutHero/>
+      <div className="container">
+        <JourneySection/>
+      </div>
     </div>
   );
 }
+
+export default AboutPage;
