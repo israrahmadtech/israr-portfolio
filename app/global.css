@@ -49,9 +49,14 @@ button{
 }
 style{
   color: #5d0ec0;
+  color: #8e51ff;
+  color: #5e0ec08f;
   color: #33007249;
   color: #01000394;
-  color: #0e001b;
+  color: #1a112a;
+  color: #2b1d46;
+  color: #342357;
+  color: linear-gradient(180deg,#100a1b,#100a1b);
 }
 :root {
   --radius: 0.625rem;
@@ -121,6 +126,10 @@ style{
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+.container{
+  width: 90%;
+  margin: 0 auto
+}
 
 @layer base {
   * {
@@ -135,4 +144,16 @@ style{
     #root{
         display: block;
     }
+}
+
+
+/* Infinite Horizontal Scroll */
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 }
