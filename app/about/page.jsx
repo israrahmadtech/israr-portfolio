@@ -6,7 +6,7 @@ function AboutPage() {
   return (
     <div id="about">
       <AboutHero/>
-      <div className="container">
+      <div className="">
         <JourneySection/>
       </div>
     </div>

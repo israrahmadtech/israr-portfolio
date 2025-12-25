@@ -1,15 +1,15 @@
 @media (max-width: 1680px) {
-    #hero{
+    #about-hero{
         height: 915px;
     }
 }
 @media (max-width: 1366px) {
-    #hero{
+    #about-hero{
         height: 750px;
     }
 }
 @media (max-width: 900px) {
-    #hero{
+    #about-hero{
         height: 100vh;
     }
 }

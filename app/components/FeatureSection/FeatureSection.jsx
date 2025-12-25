@@ -3,7 +3,7 @@ import React from 'react'
 
 function FeatureSection() {
   return (
-    <section id='features' className='py-[5vw] lg:py-[2.5vw] w-full'>
+    <section id='features' className='py-[6vw] lg:py-[3vw] w-full'>
       <h2 className='text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6'>FEATURES</h2>
       <p className="text-violet-400 dark:text-violet-300 mt-2 text-sm">
         Modern frontend expertise with reusable components, smooth animations,

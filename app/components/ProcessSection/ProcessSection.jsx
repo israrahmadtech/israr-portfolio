@@ -35,7 +35,7 @@ export function ProcessSection() {
     ];
 
     return <>
-        <section id='features' className='py-[5vw] lg:py-[2.5vw] w-full'>
+        <section id='features' className='py-[6vw] lg:py-[3vw] w-full'>
             <h2 className='text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6'>WORK PROCESS</h2>
             <p className="text-violet-400 dark:text-violet-300 mt-2 text-sm">
                 A clear and structured approach I follow to turn ideas into reliable, scalable, and high-quality web applications.

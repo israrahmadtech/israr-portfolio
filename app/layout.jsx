@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <Footer/>
           </main>
         </div>
-        {/* <CursorEffect /> */}
+        <CursorEffect />
       </body>
     </html>
   );

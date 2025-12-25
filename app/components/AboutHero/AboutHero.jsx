@@ -2,13 +2,13 @@ import React from "react";
 import StackSlide from "../StackSlide/StackSlide";
 import Link from "next/link";
 import './AboutHero.css'
+import { IconDownload } from "@tabler/icons-react";
 
 function AboutHero() {
     return (
         <section
             id="about-hero"
-            className="w-full h-[945px] bg-[#5e0ec010] flex items-center relative overflow-hidden
-                 bg-zinc-50 dark:bg-[#0a0611]"
+            className="w-full h-[945px] flex items-center relative overflow-hidden"
         >
             {/* Background Accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent" />
@@ -26,7 +26,7 @@ function AboutHero() {
                     </div>
 
                     {/* Heading */}
-                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight
                  text-zinc-900 dark:text-white">
                         Crafting
                         <span className="relative mx-2 inline-block">
@@ -40,10 +40,10 @@ function AboutHero() {
                     </h1>
 
                     {/* Divider */}
-                    <div className="w-20 h-[2px] bg-gradient-to-r from-violet-500 to-transparent" />
+                    <div className="w-20 h-[2px] hidden sm:inline-block bg-gradient-to-r from-violet-500 to-transparent" />
 
                     {/* Description */}
-                    <p className="max-w-xl text-lg text-zinc-600 dark:text-gray-400 leading-relaxed">
+                    <p className="max-w-xl text-sm sm:text-lg text-zinc-600 dark:text-gray-400 leading-relaxed">
                         I’m <span className="text-zinc-900 dark:text-white font-medium">Israr Ahmad</span>,
                         a frontend-focused web developer specializing in
                         <span className="text-violet-500 font-medium">
@@ -57,7 +57,7 @@ function AboutHero() {
                     </p>
 
                     {/* Highlights */}
-                    <ul className="space-y-3 text-zinc-600 dark:text-gray-400">
+                    <ul className="mb-2 sm:mb-3 space-y-3 text-sm sm:text-lg text-zinc-600 dark:text-gray-400">
                         <li className="flex items-center gap-3">
                             <span className="h-2 w-2 rounded-full bg-violet-500" />
                             20+ real-world production projects
@@ -76,20 +76,19 @@ function AboutHero() {
                     <div className="flex flex-wrap items-center gap-5 pt-6">
                         <Link
                             href="/contact"
-                            className="relative px-7 py-3 rounded-xl bg-violet-500 text-white font-medium
-                 shadow-[0_0_40px_rgba(139,92,246,0.45)]
-                 hover:shadow-[0_0_70px_rgba(139,92,246,0.7)]
-                 transition"
+                            className="inline-flex items-center gap-2 text-sm sm:text-md rounded-xl bg-violet-500 px-4 sm:px-6 py-3 text-white font-medium
+                            hover:bg-violet-600 transition"
                         >
                             Hire Me
                         </Link>
 
                         <a
                             href="/resume.pdf"
-                            className="px-7 py-3 rounded-xl border border-violet-500/40
+                            className="px-4 sm:px-6 py-3 flex items-center gap-2 text-sm sm:text-md rounded-xl border border-violet-500/40
                  text-violet-500 dark:text-violet-400
                  hover:bg-violet-500/10 transition"
                         >
+                            <IconDownload size={18} />
                             Download Resume
                         </a>
                     </div>
@@ -130,7 +129,7 @@ function AboutHero() {
 
             </div>
             <StackSlide />
-            <div className="absolute -bottom-20 left-[50%] h-0 w-0 rounded-full shadow-[0_0_150px_350px_rgba(139,92,246,0.6)] dark:shadow-[0_0_300px_300px_rgba(139,92,246,0.6)] -z-1"></div>
+            <div className="absolute -bottom-20 left-[40%] h-0 w-80 rounded-full shadow-[0_0_200px_350px_rgba(138,92,246,0.315)] dark:shadow-[0_0_300px_300px_rgba(139,92,246,0.6)] -z-1"></div>
         </section>
     );
 }

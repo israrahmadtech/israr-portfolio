@@ -12,6 +12,27 @@ Experience & Leadership Highlights
 Timeline (Your Journey)
 Call to Action (Contact / Projects)
 
+HOME:
+Hero + Tech stack
+About Me Section
+Features
+Featured Projects
+Tech Stack
+Work Process
+Testimonials
+CTA
+
+
+ABOUT PAGE:
+Hero + CTA
+Journey
+Skills Section
+
+Achievments Section: In about page
+FAQ: ye b add krdunga likin mujhe lgtha hai k home pe kafii cheeze hai? About pe add krna chahhye?
+
+
+
 # About Page — Structure (README)
 ## 1. Page Header
 - Title: **About Me**

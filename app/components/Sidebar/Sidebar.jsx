@@ -19,10 +19,10 @@ export default function Sidebar() {
     ]
 
     const socialMedia = [
-        { name: 'Linkedin', icon: <FaLinkedin className='text-3xl' />, link: "" },
-        { name: 'Github', icon: <FaGithub className='text-3xl' />, link: "" },
-        { name: 'Whatsapp', icon: <FaWhatsapp className='text-3xl' />, link: "" },
-        { name: 'SiFiverr', icon: <SiFiverr className='text-3xl' />, link: "" },
+        { name: 'Linkedin', icon: <FaLinkedin className='text-2xl md:text-3xl' />, link: "" },
+        { name: 'Github', icon: <FaGithub className='text-2xl md:text-3xl' />, link: "" },
+        { name: 'Whatsapp', icon: <FaWhatsapp className='text-2xl md:text-3xl' />, link: "" },
+        { name: 'SiFiverr', icon: <SiFiverr className='text-2xl md:text-3xl' />, link: "" },
     ]
 
     // Sidebar Auto Hide on 1620px vw
@@ -84,9 +84,9 @@ export default function Sidebar() {
                         {
                             socialMedia?.map((account, index) => (
                                 <a key={index + "social"} href={account?.link} target="_blank"
-                                    className="w-14 h-14 relative group flex items-center justify-center rounded-full hover:text-white bg-gray-300 dark:bg-gray-700 transition-all">
+                                    className="w-11 md:w-14 h-11 md:h-14 relative group flex items-center justify-center rounded-full hover:text-white bg-gray-300 dark:bg-gray-700 transition-all">
                                     <span className='absolute z-10'>{account?.icon}</span>
-                                    <span className='absolute left-0 right-0 w-14 h-14 rounded-full bg-violet-500 z-[1] transform scale-0 transition-transform duration-300 group-hover:scale-100'></span>
+                                    <span className='absolute left-0 right-0 w-11 md:w-14 h-11 md:h-14 rounded-full bg-violet-500 z-[1] transform scale-0 transition-transform duration-300 group-hover:scale-100'></span>
                                 </a>
                             ))
                         }

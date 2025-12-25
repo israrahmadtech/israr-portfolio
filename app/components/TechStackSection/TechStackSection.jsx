@@ -12,7 +12,7 @@ import {
 
 export function TechStackSection() {
     return (
-        <section id="tech-stack-section">
+        <section id="tech-stack-section" className="py-[6vw] lg:py-[3vw]">
             <h2 className='text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6'>TECH STACK</h2>
             <p className="text-violet-400 dark:text-violet-300 mt-2 text-sm">
                 Tools and technologies I use to build fast, scalable, and production-ready web applications with clean UI and solid frontend architecture.

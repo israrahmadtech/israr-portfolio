@@ -32,8 +32,8 @@ function ProjectSection() {
         },
     ];
     return (
-        <section id='features' className='py-[5vw] lg:py-[2.5vw] w-full'>
-            <h2 className='text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6'>PROJECTS</h2>
+        <section id='features' className='py-[6vw] lg:py-[3vw] w-full'>
+            <h2 className='text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6'>FEATURED PROJECTS</h2>
             <p className="text-violet-400 dark:text-violet-300 mt-2 text-sm">
                 A showcase of my personal and collaborative projects built with modern web technologies like React.js, Next.js, Tailwind CSS, and more. Each project highlights clean UI, smooth interactions, and practical real-world implementations.
             </p>
