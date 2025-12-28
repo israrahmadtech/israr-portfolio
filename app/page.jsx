@@ -1,7 +1,6 @@
 import AboutSection from "./components/AboutSection/AboutSection"
 import CallToAction from "./components/CTA/CTA"
 import FeatureSection from "./components/FeatureSection/FeatureSection"
-import Footer from "./components/Footer/Footer"
 import Hero from "./components/Hero/Hero"
 import { ProcessSection } from "./components/ProcessSection/ProcessSection"
 import ProjectSection from "./components/ProjectSection/ProjectSection"

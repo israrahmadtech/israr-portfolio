@@ -1,4 +1,4 @@
-import { FocusCards } from "@/components/ui/focus-cards";
+import { FocusCards } from "@/app/components/ProcessSection/focus-cards";
 import {
     IconChecklist,
     IconLayoutDashboard,

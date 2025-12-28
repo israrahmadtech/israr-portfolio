@@ -2,7 +2,7 @@
 // Minimal clean version wired together.
 
 "use client";
-import { CodeBlock } from "@/components/ui/code-block";
+import { CodeBlock } from "@/app/components/TechSnippet/code-block";
 import { useState } from "react";
 
 export default function TechSnippet() {

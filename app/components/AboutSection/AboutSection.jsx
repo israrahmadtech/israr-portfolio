@@ -1,4 +1,4 @@
-import FeaturesSectionDemo from '@/components/features-section-demo-1'
+import FeaturesSectionDemo from '@/app/components/AboutSection/features-section-demo-1'
 import React from 'react'
 
 function AboutSection() {
