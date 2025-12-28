@@ -1,4 +1,4 @@
-import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { HoverEffect } from "@/app/components/TechStackSection/card-hover-effect";
 import {
     IconBrandReact,
     IconBrandNextjs,

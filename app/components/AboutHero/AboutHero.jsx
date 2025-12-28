@@ -86,7 +86,7 @@ function AboutHero() {
                             href="/resume.pdf"
                             className="px-4 sm:px-6 py-3 flex items-center gap-2 text-sm sm:text-md rounded-xl border border-violet-500/40
                  text-violet-500 dark:text-violet-400
-                 hover:bg-violet-500/10 transition"
+                 bg-violet-500/10 transition"
                         >
                             <IconDownload size={18} />
                             Download Resume

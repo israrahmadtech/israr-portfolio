@@ -1,7 +1,7 @@
 import React from "react";
-import { Timeline } from "@/components/ui/timeline";
+import { Timeline } from "@/app/components/JourneySection/timeline";
 import {
-    FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaFigma, FaGithub, FaGitAlt, FaDatabase, FaNodeJs, FaRocket,
+    FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaFigma, FaGitAlt, FaDatabase, FaRocket,
     FaLaptopCode,
     FaUsers
 } from "react-icons/fa";

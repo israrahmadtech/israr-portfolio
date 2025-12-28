@@ -2,7 +2,6 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
 import { HoverBorderGradient } from "../../../components/ui/hover-border-gradient";
 
@@ -21,7 +20,7 @@ export const ProjectCard = ({
     )}>
       {/* Project Image */}
       {image && (
-        <Image
+        <img
           src={image}
           width={800}
           height={500}

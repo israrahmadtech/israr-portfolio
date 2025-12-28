@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { IconHome, IconInfoCircle, IconClipboardList, IconMenu2, IconX } from "@tabler/icons-react";
+import { IconHome, IconInfoCircle, IconMenu2, IconX, IconPhoneCall, IconFileText, IconRocket } from "@tabler/icons-react";
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa6'
 import { SiFiverr } from "react-icons/si"
 import './Sidebar.css'
@@ -15,7 +15,9 @@ export default function Sidebar() {
     const navItems = [
         { name: 'Home', path: '/', icon: <IconHome className="w-5 h-5" /> },
         { name: 'About', path: '/about', icon: <IconInfoCircle className="w-5 h-5" /> },
-        { name: 'Projects', path: '/projects', icon: <IconClipboardList className="w-5 h-5" /> },
+        { name: 'Projects', path: '/projects', icon: <IconRocket className="w-5 h-5" /> },
+        { name: 'Contact', path: '/contact', icon: <IconPhoneCall className="w-5 h-5" /> },
+        { name: 'My Resume', path: '/resume', icon: <IconFileText className="w-5 h-5" /> },
     ]
 
     const socialMedia = [
