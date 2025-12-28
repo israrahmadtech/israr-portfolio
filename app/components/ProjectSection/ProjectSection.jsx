@@ -1,8 +1,8 @@
-import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import { IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
 import React from 'react'
 import { ProjectCard } from '../ProjectCard/ProjectCard';
+import { HoverBorderGradient } from './hover-border-gradient';
 
 function ProjectSection() {
     const projects = [

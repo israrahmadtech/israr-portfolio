@@ -1,4 +1,4 @@
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { InfiniteMovingCards } from "@/app/components/InfinitMovingCards/infinite-moving-cards";
 
 export function TestimonialSection() {
     return (
@@ -11,7 +11,7 @@ export function TestimonialSection() {
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="right"
-                    speed="slow"
+                    speed="slower"
                 />
             </div>
         </section>

@@ -3,7 +3,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
-import { HoverBorderGradient } from "../../../components/ui/hover-border-gradient";
+import { HoverBorderGradient } from "../ProjectSection/hover-border-gradient";
 
 export const ProjectCard = ({
   title,
