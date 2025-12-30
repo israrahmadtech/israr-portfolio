@@ -1,11 +1,12 @@
-import AboutSection from "./components/AboutSection/AboutSection"
-import CallToAction from "./components/CTA/CTA"
-import FeatureSection from "./components/FeatureSection/FeatureSection"
-import Hero from "./components/Hero/Hero"
-import { ProcessSection } from "./components/ProcessSection/ProcessSection"
-import ProjectSection from "./components/ProjectSection/ProjectSection"
-import { TechStackSection } from "./components/TechStackSection/TechStackSection"
-import { TestimonialSection } from "./components/TestimonialSection/TestimonialSection"
+import AboutSection from "../components/AboutSection/AboutSection"
+import CallToAction from "../components/CTA/CTA"
+import FeatureSection from "../components/FeatureSection/FeatureSection"
+import Hero from "../components/Hero/Hero"
+import { ProcessSection } from "../components/ProcessSection/ProcessSection"
+import ProjectSection from "../components/ProjectSection/ProjectSection"
+import { TechStackSection } from "../components/TechStackSection/TechStackSection"
+import { TestimonialSection } from "../components/TestimonialSection/TestimonialSection"
+
 
 function Home() {
   return (

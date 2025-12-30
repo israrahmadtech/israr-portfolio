@@ -82,15 +82,15 @@ function AboutHero() {
                             Hire Me
                         </Link>
 
-                        <a
-                            href="/resume.pdf"
+                        <Link
+                            href="/resume"
                             className="px-4 sm:px-6 py-3 flex items-center gap-2 text-sm sm:text-md rounded-xl border border-violet-500/40
                  text-violet-500 dark:text-violet-400
                  bg-violet-500/10 transition"
                         >
                             <IconDownload size={18} />
                             Download Resume
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

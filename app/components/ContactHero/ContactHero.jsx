@@ -1,8 +1,3 @@
-'use client'
-import React from "react";
-import Link from "next/link";
-// import './ContactHero.css'
-
 function ContactHero() {
     return (
         <section
@@ -12,8 +7,8 @@ function ContactHero() {
             <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
                 {/* Left Content */}
                 <div className="space-y-6">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
-            bg-violet-500/10 text-violet-500 text-sm font-semibold">
+                    <span className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+            bg-violet-500/10 text-violet-500 text-sm font-semibold`}>
                         <span className="h-2 w-2 rounded-full bg-violet-500 animate-pulse" />
                         CONTACT
                     </span>
@@ -31,21 +26,18 @@ function ContactHero() {
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4 pt-4">
-                        <Link
-                            href="#contact-form"
-                            className="text-sm sm:text-md px-4 sm:px-6 py-3 rounded-xl bg-violet-500 text-white font-medium
-              shadow-[0_0_40px_rgba(139,92,246,0.45)]
-              hover:shadow-[0_0_70px_rgba(139,92,246,0.7)]
-              transition"
+                        <a
+                            href="#contact-section"
+                            className={`text-sm sm:text-md px-4 sm:px-6 py-3 rounded-xl bg-violet-500 text-white font-medium
+                                        shadow-[0_0_40px_rgba(139,92,246,0.45)] hover:shadow-[0_0_70px_rgba(139,92,246,0.7)] transition`}
                         >
                             Send a Message
-                        </Link>
+                        </a>
 
                         <a
-                            href="mailto:your@email.com"
-                            className="text-sm sm:text-md px-4 sm:px-6 py-3 rounded-xl border border-violet-500/40
-              text-violet-500 dark:text-violet-400
-              hover:bg-violet-500/10 transition"
+                            href="mailto:israrahmadtech@gmail.com"
+                            className={`text-sm sm:text-md px-4 sm:px-6 py-3 rounded-xl border border-violet-500/40
+                                        text-violet-500 dark:text-violet-400 hover:bg-violet-500/10 transition`}
                         >
                             Email Me
                         </a>
@@ -57,10 +49,8 @@ function ContactHero() {
 
                     {/* Card */}
                     <div
-                        className="relative max-w-md rounded-3xl p-8
-    border border-violet-500/30
-    bg-gradient-to-br from-violet-500/20 to-transparent
-    backdrop-blur-sm space-y-6"
+                        className={`relative max-w-md rounded-3xl p-8 border border-violet-500/30
+                                    bg-gradient-to-br from-violet-500/20 to-transparent backdrop-blur-sm space-y-6`}
                     >
                         <div>
                             <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
@@ -114,8 +104,7 @@ function ContactHero() {
             </div>
 
             {/* Bottom Glow */}
-            <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 h-0 w-0
-        shadow-[0_0_200px_300px_rgba(139,92,246,0.45)] -z-10" />
+            <div className={`absolute -bottom-32 left-1/2 -translate-x-1/2 h-0 w-0 shadow-[0_0_200px_300px_rgba(139,92,246,0.45)] -z-10`} />
         </section>
     );
 }

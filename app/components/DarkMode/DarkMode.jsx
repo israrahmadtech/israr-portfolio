@@ -16,10 +16,8 @@ export default function DarkModeToggle() {
     return (
         <button
             onClick={() => setDark(!dark)}
-            className={`absolute z-50 top-4 right-4 flex items-center 
-    w-12 h-6 md:w-16 md:h-8 
-    p-1 rounded-full transition-colors duration-300
-    ${dark ? "bg-violet-500" : "bg-gray-300"}`}
+            className={`absolute z-500 top-4 right-4 flex items-center w-12 h-6 md:w-16 md:h-8 p-1 rounded-full transition-colors duration-300
+                        ${dark ? "bg-violet-500" : "bg-gray-300"}`}
         >
             {/* Circle */}
             <span

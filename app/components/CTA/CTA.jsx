@@ -27,16 +27,15 @@ export default function CallToAction() {
                     </Link>
 
                     {/* Download Resume */}
-                    <a
-                        href="/resume.pdf"
-                        download
+                    <Link
+                        href="/resume"
                         className="inline-flex items-center gap-2 text-sm sm:text-md rounded-xl border border-violet-500/40
                             px-4 sm:px-6 py-3 text-violet-600 dark:text-violet-300
                             bg-violet-500/10 transition"
                     >
                         <IconDownload size={18} />
                         Download Resume
-                    </a>
+                    </Link>
 
                     {/* Contact */}
                     <Link

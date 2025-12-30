@@ -28,24 +28,24 @@ const testimonials = [
     },
     {
         quote:
-            "One of the most reliable frontend developers I’ve worked with. Strong React skills, great design sense, and very professional throughout the project.",
-        name: "Usman Khalid",
-        title: "Product Manager",
+            "Outstanding work. Building everything from scratch without following tutorials truly stands out. This is not just a demo project — it includes authentication, cart functionality, protected routes, a full admin panel, and a fully responsive UI. Overall, it’s one of the best demo web applications I’ve seen.",
+        name: "Rafi Ullah",
+        title: "Frontend Developer",
         image: "/israr7.png",
     },
     {
         quote:
-            "Israr understands UI/UX deeply. He transformed our rough ideas into a polished, modern interface that users genuinely love.",
-        name: "Hamza Noor",
-        title: "UI/UX Designer",
-        image: "/israr7.png",
+            "This feels like a real production-level system, not a tutorial project. The architecture is clean, authentication is secure, real-time features are well implemented, and the admin panel is thoughtfully designed. Projects like this clearly reflect strong system-level thinking.",
+        name: "Fahad Muneer",
+        title: "Frontend Developer",
+        image: "/testimonial03.jpg",
     },
     {
         quote:
-            "Excellent experience working with Israr. He handled the frontend independently and delivered a scalable, maintainable React codebase.",
-        name: "Bilal Ahmed",
-        title: "Tech Lead",
-        image: "/israr7.png",
+            "Israr built a full-stack food ordering web application with secure authentication and real-time updates. The project clearly showcases strong expertise in React.js and Supabase. Overall, it’s an impressive and well-executed system.",
+        name: "Talha Bin Yousaf",
+        title: "Full Stack Dev",
+        image: "/testimonial04.jpg",
     },
     {
         quote:

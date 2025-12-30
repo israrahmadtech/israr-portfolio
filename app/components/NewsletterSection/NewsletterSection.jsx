@@ -36,8 +36,8 @@ export default function NewsletterSection() {
                 <div className="relative flex flex-col items-center justify-center space-y-4">
                     <div className="absolute w-[420px] h-[420px] rounded-full bg-violet-500/20 blur-3xl" />
                     <div
-                        className="relative w-full max-w-md rounded-3xl p-8 border border-violet-500/30 bg-gradient-to-br from-violet-500/20
-                                    to-transparent backdrop-blur-sm flex flex-col items-center justify-center space-y-4"
+                        className={`relative w-full max-w-md rounded-3xl p-8 border border-violet-500/30 bg-gradient-to-br from-violet-500/20
+                                    to-transparent backdrop-blur-sm flex flex-col items-center justify-center space-y-4`}
                     >
                         <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
                             Connect with me

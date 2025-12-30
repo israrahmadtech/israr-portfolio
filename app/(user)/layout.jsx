@@ -1,8 +1,9 @@
-import CursorEffect from './components/CursorEffect/CursorEffect';
-import DarkModeToggle from './components/DarkMode/DarkMode';
-import Footer from './components/Footer/Footer';
-import Sidebar from './components/Sidebar/Sidebar';
-import './global.css'
+
+import '../global.css'
+import CursorEffect from '../components/CursorEffect/CursorEffect';
+import DarkModeToggle from '../components/DarkMode/DarkMode';
+import Footer from '../components/Footer/Footer';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 export const metadata = {
   title: "Israr Ahmad",
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <div id="root" className='relative w-full min-h-screen grid grid-cols-[350px_1fr] max-w-[1920px] mx-auto'>
           <Sidebar />
-          <main className='w-full h-screen relative z-40 overflow-y-auto'>
+          <main id='main' className='w-full h-screen relative z-40 overflow-y-auto'>
             <DarkModeToggle />
             {children}
             <Footer/>

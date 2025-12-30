@@ -17,6 +17,7 @@ export default function Sidebar() {
         { name: 'About', path: '/about', icon: <IconInfoCircle className="w-5 h-5" /> },
         { name: 'Projects', path: '/projects', icon: <IconRocket className="w-5 h-5" /> },
         { name: 'Contact', path: '/contact', icon: <IconPhoneCall className="w-5 h-5" /> },
+        { name: 'Highlights', path: '/highlights', icon: <IconFileText className="w-5 h-5" /> },
         { name: 'My Resume', path: '/resume', icon: <IconFileText className="w-5 h-5" /> },
     ]
 
@@ -62,7 +63,7 @@ export default function Sidebar() {
 
                 {/* Navigation */}
                 <nav className="flex-1">
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 overflow-y-auto">
                         {navItems.map((item) => (
                             <li key={item.path}>
                                 <Link
