@@ -1,10 +1,6 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-
 export default function ContactSection() {
     return (
-        <section className="w-full py-20">
+        <section  id="contact-section" className="w-full py-20">
             <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                 {/* Left: Contact Form */}
@@ -48,8 +44,7 @@ export default function ContactSection() {
 
                     {/* Card */}
                     <div
-                        className="relative w-full max-w-md rounded-3xl p-8 border border-violet-500/30
-                                    bg-gradient-to-br from-violet-500/20 to-transparent backdrop-blur-sm space-y-6"
+                        className="relative w-full max-w-md rounded-3xl p-8 border border-violet-500/30 bg-gradient-to-br from-violet-500/20 to-transparent backdrop-blur-sm space-y-6"
                     >
                         {/* Header */}
                         <div>

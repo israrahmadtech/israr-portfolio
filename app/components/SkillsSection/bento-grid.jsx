@@ -19,7 +19,6 @@ export const BentoGridItem = ({
   className,
   title,
   description,
-  header,
   icon
 }) => {
   return (
@@ -29,7 +28,9 @@ export const BentoGridItem = ({
         bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm hover:from-violet-500/30`,
         className
       )}>
-      {header}
+      <div className="flex justify-center items-center flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-violet-200 dark:from-violet-900 dark:to-violet-800 to-violet-100">
+        <h2 className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">{title}</h2>
+      </div>
       <div className="transition duration-200 group-hover/bento:translate-x-2">
         {icon}
         <div

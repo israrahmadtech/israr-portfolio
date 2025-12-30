@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectCard } from '../components/ProjectCard/ProjectCard';
+import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 
 function Projects() {
   const projects = [
@@ -30,13 +30,16 @@ function Projects() {
   ];
   return (
     <div className='w-full h-auto container'>
-      <h2 className="text-center py-10 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+      <h2 className="text-center pt-10 pb-5 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
         My{" "}
         <span className="relative inline-block text-violet-500">
           Projects
           <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-violet-500/40 rounded-full" />
         </span>
       </h2>
+      <p className="text-center max-w-2xl mx-auto text-violet-500 dark:text-violet-300">
+        These projects demonstrate my hands-on experience with React, modern tools, and real production-level features.
+      </p>
 
       {/* FEATURED PROJECTS */}
       <section id='feature-projects' className='py-[6vw] md:py-[3vw] w-full'>

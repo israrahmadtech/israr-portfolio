@@ -39,60 +39,48 @@ export function SkillsSection() {
         </section>
     );
 }
-const Skeleton = () => (
-    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-violet-200 dark:from-violet-900 dark:to-violet-800 to-violet-100">
-
-    </div>
-);
 
 const items = [
     {
         title: "Figma to Code",
         description:
             "I convert Figma designs into pixel-perfect, responsive, and accessible user interfaces using modern frontend tools.",
-        header: <Skeleton />,
         icon: <IconBrandFigma className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "Portfolio Websites",
         description:
             "I build modern, fast, and visually engaging portfolio websites that showcase skills, projects, and personal branding.",
-        header: <Skeleton />,
         icon: <IconCode className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "Business Websites",
         description:
             "I create scalable and professional business websites focused on performance, usability, and clean UI/UX.",
-        header: <Skeleton />,
         icon: <IconBrandNextjs className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "React & Next.js Applications",
         description:
             "I develop dynamic, component-based web applications using React.js and Next.js with clean architecture.",
-        header: <Skeleton />,
         icon: <IconBrandReact className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "Modern Styling & UI Systems",
         description:
             "I use Tailwind CSS to build reusable, responsive, and consistent design systems with modern UI patterns.",
-        header: <Skeleton />,
         icon: <IconBrandTailwind className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "MERN Stack (In Progress)",
         description:
             "Currently learning backend development with Node.js, Express.js, MongoDB, and React Native to build full-stack applications.",
-        header: <Skeleton />,
         icon: <IconServer className="h-4 w-4 text-violet-500" />,
     },
     {
         title: "Git, GitHub & Collaboration",
         description:
             "Experienced with Git workflows, GitHub collaboration, version control, and team-based development.",
-        header: <Skeleton />,
         icon: <IconBrandGithub className="h-4 w-4 text-violet-500" />,
     },
 ];

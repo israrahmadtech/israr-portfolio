@@ -1,9 +1,9 @@
 import React from 'react'
-import ContactHero from '../components/ContactHero/ContactHero'
-import ContactSection from '../components/ContactSection/ContactSection'
-import NewsletterSection from '../components/NewsletterSection/NewsletterSection'
-import CallToAction from '../components/CTA/CTA'
-import FAQSection from '../components/FAQ/FAQsection'
+import ContactHero from '../../components/ContactHero/ContactHero'
+import ContactSection from '../../components/ContactSection/ContactSection'
+import NewsletterSection from '../../components/NewsletterSection/NewsletterSection'
+import CallToAction from '../../components/CTA/CTA'
+import FAQSection from '../../components/FAQ/FAQsection'
 
 function Contact() {
     return (
