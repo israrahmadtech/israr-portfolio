@@ -18,7 +18,7 @@ export default function ResumePage() {
       
       <div className="w-full flex justify-center">
         <img
-          src="/IsrarAhmadResumeImage.webp"
+          src="/images/portfolio/IsrarAhmadResumeImage.webp"
           title="Resume"
           className="bg-white w-[95%] lg:w-[70%] border shadow-lg"
         />
