@@ -38,9 +38,9 @@ function ProjectSection() {
                 A showcase of my personal and collaborative projects built with modern web technologies like React.js, Next.js, Tailwind CSS, and more. Each project highlights clean UI, smooth interactions, and practical real-world implementations.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                {products?.length > 0 && projects.map(project => (
+                {projects?.length > 0 && projects.map(project => (
                     <ProjectCard
-                        key={project.id}
+                        key={project.id + "-home"}
                         title={project.title}
                         description={project.description}
                         image={project.image}

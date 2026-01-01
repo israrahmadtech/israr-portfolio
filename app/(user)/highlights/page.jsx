@@ -40,7 +40,7 @@ export default function Highlights() {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                     {highlightsData?.length > 0 && highlightsData.map((item, idx) => (
-                        <HighlightCard key={idx} {...item} />
+                        <HighlightCard key={idx+"-highlights"} {...item} />
                     ))}
                 </div>
             </div>

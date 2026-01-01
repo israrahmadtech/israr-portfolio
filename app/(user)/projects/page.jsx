@@ -50,7 +50,7 @@ function Projects() {
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {projects?.length > 0 && projects.map(project => (
             <ProjectCard
-              key={project.id}
+              key={project.id + "-1"}
               title={project.title}
               description={project.description}
               image={project.image}
@@ -70,7 +70,7 @@ function Projects() {
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {projects?.length > 0 && projects.map(project => (
             <ProjectCard
-              key={project.id}
+              key={project.id + "-2"}
               title={project.title}
               description={project.description}
               image={project.image}
@@ -90,7 +90,7 @@ function Projects() {
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {projects?.length > 0 && projects.map(project => (
             <ProjectCard
-              key={project.id}
+              key={project.id + "-3"}
               title={project.title}
               description={project.description}
               image={project.image}
