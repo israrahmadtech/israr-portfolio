@@ -1,9 +1,47 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function NewsletterSection() {
+    const [isLoading, setIsLoading] = useState(false)
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        const email = e.target.email.value
+        if (!email) {
+            toast.error("Email is required!")
+            return
+        }
+
+        try {
+            setIsLoading(true)
+
+            const res = await fetch("/api/emails", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+            })
+
+            const body = await res.json()
+            
+            if (!res.ok) {
+                throw new Error(body.message)
+            }
+
+            toast.success("Thanks for subscription!")
+            e.target.reset()
+        }
+        catch (error) {
+            toast.error(error.message || "Something went wrong!")
+        }
+        finally {
+            setIsLoading(false)
+        }
+    }
+
+
     return (
         <section className="w-full py-20">
             <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -17,8 +55,9 @@ export default function NewsletterSection() {
                         Get updates about my latest projects, articles, and resources directly in your inbox.
                     </p>
 
-                    <form className="mt-6 flex flex-col gap-4 w-full">
+                    <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4 w-full">
                         <input
+                            name="email"
                             type="email"
                             placeholder="Your Email"
                             className="flex-1 p-3 rounded-lg outline-none bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm focus:border-violet-500/70"
@@ -27,7 +66,7 @@ export default function NewsletterSection() {
                             type="submit"
                             className="w-fit ms-auto px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-md rounded-lg bg-violet-500 text-white font-semibold transition-transform duration-300"
                         >
-                            Subscribe
+                            {isLoading ? "Subscribing..." : "Subscribe"}
                         </button>
                     </form>
                 </div>

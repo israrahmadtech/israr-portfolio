@@ -1,6 +1,41 @@
+"use client"
+
+import { useState } from "react";
+import toast from "react-hot-toast";
+
 export default function ContactSection() {
+    const [isLoading, setIsLoading] = useState(false)
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const { name, email, message } = e.target
+        if (!email.value || !message.value) return toast.error("Email & Message is required!")
+        setIsLoading(true)
+        const contact = { name: name.value, email: email.value, message: message.value }
+
+        try {
+            const res = await fetch('/api/contacts', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(contact)
+            })
+
+            const data = await res.json()
+
+            if (!res.ok) throw new Error(data.message)
+            toast.success("Message has sent!")
+            // e.target.reset()
+        }
+        catch (error) {
+            toast.error("Something went wrong!")
+        }
+        finally { setIsLoading(false) }
+    }
+
+
     return (
-        <section  id="contact-section" className="w-full py-20">
+        <section id="contact-section" className="w-full py-20">
             <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                 {/* Left: Contact Form */}
@@ -12,18 +47,21 @@ export default function ContactSection() {
                         Send me a message and I&apos;ll get back to you as soon as possible.
                     </p>
 
-                    <form className="mt-6 flex flex-col gap-4">
+                    <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
                         <input
+                            name="name"
                             type="text"
                             placeholder="Your Name"
                             className="w-full p-3 rounded-lg outline-none bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm focus:border-violet-500/70"
                         />
                         <input
+                            name="email"
                             type="email"
                             placeholder="Your Email"
                             className="w-full p-3 rounded-lg outline-none bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm focus:border-violet-500/70"
                         />
                         <textarea
+                            name="message"
                             rows={5}
                             placeholder="Your Message"
                             className="w-full p-3 rounded-lg outline-none bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm focus:border-violet-500/70 resize-none"
@@ -32,7 +70,7 @@ export default function ContactSection() {
                             type="submit"
                             className="w-fit ms-auto px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-md rounded-lg bg-violet-500 text-white font-semibold transition-transform duration-300"
                         >
-                            Send Message
+                            {isLoading ? "Sending..." : "Send Message"}
                         </button>
                     </form>
                 </div>

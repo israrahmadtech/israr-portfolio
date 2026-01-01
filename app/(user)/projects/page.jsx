@@ -1,33 +1,33 @@
 import React from 'react'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 
+const projects = [
+  {
+    id: "project-1",
+    title: "Portfolio Website",
+    description: "My personal portfolio built with Next.js and Tailwind CSS.",
+    image: '/images/portfolio/foodWeb.png',
+    tech: ["Next.js", "React.js", "Tailwind CSS"],
+    link: "https://github.com/israr/portfolio"
+  },
+  {
+    id: "project-2",
+    title: "E-commerce App",
+    description: "A full-stack e-commerce app using Supabase and Next.js.",
+    image: "/images/portfolio/imageSlider.png",
+    tech: ["Next.js", "Tailwind CSS", "Supabase"],
+    link: "#"
+  },
+  {
+    id: "project-3",
+    title: "Portfolio Website",
+    description: "My personal portfolio built with Next.js and Tailwind CSS.",
+    image: '/images/portfolio/foodWeb.png',
+    tech: ["Next.js", "React.js", "Tailwind CSS"],
+    link: "https://github.com/israr/portfolio"
+  },
+];
 function Projects() {
-  const projects = [
-    {
-      id: "project-1",
-      title: "Portfolio Website",
-      description: "My personal portfolio built with Next.js and Tailwind CSS.",
-      image: '/foodWeb.png',
-      tech: ["Next.js", "React.js", "Tailwind CSS"],
-      link: "https://github.com/israr/portfolio"
-    },
-    {
-      id: "project-2",
-      title: "E-commerce App",
-      description: "A full-stack e-commerce app using Supabase and Next.js.",
-      image: "/imageSlider.png",
-      tech: ["Next.js", "Tailwind CSS", "Supabase"],
-      link: "#"
-    },
-    {
-      id: "project-3",
-      title: "Portfolio Website",
-      description: "My personal portfolio built with Next.js and Tailwind CSS.",
-      image: '/foodWeb.png',
-      tech: ["Next.js", "React.js", "Tailwind CSS"],
-      link: "https://github.com/israr/portfolio"
-    },
-  ];
   return (
     <div className='w-full h-auto container'>
       <h2 className="text-center pt-10 pb-5 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
@@ -48,7 +48,7 @@ function Projects() {
           Best work that represents my strongest skills and problem-solving ability.
         </p>
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {projects.map(project => (
+          {projects?.length > 0 && projects.map(project => (
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -68,7 +68,7 @@ function Projects() {
           Solid, well-structured projects built to strengthen real-world development skills.
         </p>
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {projects.map(project => (
+          {projects?.length > 0 && projects.map(project => (
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -88,7 +88,7 @@ function Projects() {
           Smaller projects and experiments created while learning new concepts and tools.
         </p>
         <div className="pt-[6vw] sm:pt-[2vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {projects.map(project => (
+          {projects?.length > 0 && projects.map(project => (
             <ProjectCard
               key={project.id}
               title={project.title}

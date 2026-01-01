@@ -7,21 +7,21 @@ const highlightsData = [
         description: 'Won 1st place at XYZ Hackathon 2025.',
         date: 'March 2025',
         icon: <IconAward />,
-        image: '/project1.png',
+        image: '/images/portfolio//project1.png',
     },
     {
         title: 'Tech Conference',
         description: 'Attended JSConf 2025 and learned advanced React patterns.',
         date: 'Feb 2025',
         icon: <IconDeviceLaptop />,
-        image: '/project1.png',
+        image: '/images/portfolio//project1.png',
     },
     {
         title: 'Open Source Contribution',
         description: 'Contributed to Tailwind CSS plugin development.',
         date: 'Jan 2025',
         icon: <IconUsers />,
-        image: '/project1.png',
+        image: '/images/portfolio//project1.png',
     },
 ];
 
@@ -39,7 +39,7 @@ export default function Highlights() {
 
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                    {highlightsData.map((item, idx) => (
+                    {highlightsData?.length > 0 && highlightsData.map((item, idx) => (
                         <HighlightCard key={idx} {...item} />
                     ))}
                 </div>

@@ -3,13 +3,20 @@ import React, { useState } from "react";
 import {
     IconArrowLeft,
     IconBrandTabler,
+    IconHome,
     IconMail,
     IconMoon,
     IconPhoneCall,
 } from "@tabler/icons-react";
-import { Sidebar, SidebarBody, SidebarLink } from "@/app/components/Sidebar/sidebarUI";
+import { Sidebar, SidebarBody, SidebarLink } from "@/app/components/AdminSidebar/sidebarUI";
+import { useLogout } from "../../CustomHooks/AdminLogout";
+import { FaHome } from "react-icons/fa";
+import Link from "next/link";
+
 
 export function AdminSidebar() {
+    const handleLogout = useLogout()
+    
     const links = [
         {
             label: "Dashboard",
@@ -34,10 +41,9 @@ export function AdminSidebar() {
         },
         {
             label: "Logout",
-            href: "#",
-            icon: (
-                <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
-            ),
+            href: "#", // href must exist for Link, but we prevent default
+            icon: <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
+            onClick: handleLogout,
         },
     ];
     const [open, setOpen] = useState(false);
@@ -48,7 +54,7 @@ export function AdminSidebar() {
     "
             >
                 <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
-                    {/* <div className={open ? "opacity-0" : "opacity-100"}><LogoIcon /></div> */}
+                    <Link href='/' className="flex items-center gap-2"> <LogoIcon /> {open ? "Home" : ""} </Link>
 
                     <div className="mt-8 flex flex-col gap-2">
                         {links.map((link, idx) => (
@@ -68,7 +74,7 @@ export function AdminSidebar() {
                             href: "#",
                             icon: (
                                 <img
-                                    src="https://assets.aceternity.com/manu.png"
+                                    src="/israr7.png"
                                     className="h-7 w-7 shrink-0 rounded-full ring-1 ring-violet-500/30"
                                     width={50}
                                     height={50}
@@ -89,7 +95,7 @@ export const LogoIcon = () => {
         <span
             className="rounded-full w-4 h-4 md:w-6 md:h-6 bg-white dark:bg-violet-500/10 flex items-center justify-center"
         >
-            <IconMoon className="w-3 h-3 md:w-4 md:h-4 text-violet-500" />
+            <FaHome className="w-3 h-3 md:w-5 md:h-5 text-violet-300" />
         </span>
     );
 };

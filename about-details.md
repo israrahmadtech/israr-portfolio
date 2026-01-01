@@ -30,7 +30,7 @@ Skills Section
 Achievments Section: In about page
 FAQ: ye b add krdunga likin mujhe lgtha hai k home pe kafii cheeze hai? About pe add krna chahhye?
 
-ABOUT PAGE:
+PROJECTS PAGE:
 Featured Projects
 Core Projects
 Learning Projects
