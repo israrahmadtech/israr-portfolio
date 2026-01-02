@@ -1,31 +1,9 @@
 import HighlightCard from "../../components/HighlightCard/HighlightCard";
-import { IconAward, IconDeviceLaptop, IconUsers } from '@tabler/icons-react';
+import { getItems } from "@/services/dbService"; // yahan se data fetch ho raha
 
-const highlightsData = [
-    {
-        title: 'Hackathon Winner',
-        description: 'Won 1st place at XYZ Hackathon 2025.',
-        date: 'March 2025',
-        icon: <IconAward />,
-        image: '/images/portfolio//project1.png',
-    },
-    {
-        title: 'Tech Conference',
-        description: 'Attended JSConf 2025 and learned advanced React patterns.',
-        date: 'Feb 2025',
-        icon: <IconDeviceLaptop />,
-        image: '/images/portfolio//project1.png',
-    },
-    {
-        title: 'Open Source Contribution',
-        description: 'Contributed to Tailwind CSS plugin development.',
-        date: 'Jan 2025',
-        icon: <IconUsers />,
-        image: '/images/portfolio//project1.png',
-    },
-];
+export default async function Highlights() {
+    const highlightsData = await getItems({ table: "highlights" });
 
-export default function Highlights() {
     return (
         <section id="highlights" className="w-full py-20">
             <div className="container mx-auto sm:px-4">
@@ -39,9 +17,16 @@ export default function Highlights() {
 
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                    {highlightsData?.length > 0 && highlightsData.map((item, idx) => (
-                        <HighlightCard key={idx+"-highlights"} {...item} />
-                    ))}
+                    {highlightsData?.length > 0 ? (
+                        highlightsData.map((item) => (
+                            <HighlightCard
+                                key={item.id}
+                                highlight={item} // ⚡ pass the whole highlight object
+                            />
+                        ))
+                    ) : (
+                        <p className="text-center col-span-full">No highlights yet!</p>
+                    )}
                 </div>
             </div>
         </section>

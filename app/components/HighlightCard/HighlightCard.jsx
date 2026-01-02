@@ -1,23 +1,45 @@
-// app/highlights/HighlightCard.tsx
+export default function HighlightCard({ highlight, onEdit, onDelete }) {
+    const { title, description, date, image } = highlight;
 
-export default function HighlightCard({ title, description, date, icon, image }) {
     return (
         <div className="relative rounded-3xl p-6 border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-transparent backdrop-blur-sm transition-transform duration-300">
+            {/* Image */}
             {image && (
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-46 object-cover"
+                    className="w-full h-46 object-cover rounded-xl"
                 />
             )}
 
-            {/* Title & Description */}
-            <div className="flex items-center justify-between gap-5">
-                <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mt-4">{title}</h3>
-                <div className="text-3xl text-violet-500">{icon}</div>
+            {/* Title & Icon */}
+            <div className="flex items-center justify-between gap-5 mt-4">
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">{title}</h3>
             </div>
+
+            {/* Description */}
             <p className="text-sm text-zinc-600 dark:text-violet-300 mt-2">{description}</p>
-            <p className="text-xs text-violet-400 mt-3">{date}</p>
+
+            {/* Date */}
+            {date && <p className="text-xs text-violet-400 mt-3">{date}</p>}
+
+            {/* Optional Edit/Delete buttons for admin */}
+            {onEdit && onDelete && (
+                <div className="flex justify-end gap-2 mt-4">
+                    <button
+                        onClick={onEdit}
+                        className="px-3 py-1 text-sm text-yellow-600 dark:text-yellow-300 border border-yellow-500/40 rounded-md bg-yellow-500/10 hover:border-yellow-500/80 transition"
+                    >
+                        Edit
+                    </button>
+                    <button
+                        onClick={onDelete}
+                        className="px-3 py-1 text-sm text-red-600 dark:text-red-500 border border-red-500/40 rounded-md bg-red-500/10 hover:border-red-500/80 transition"
+                    >
+                        Delete
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

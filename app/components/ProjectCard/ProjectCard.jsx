@@ -5,14 +5,9 @@ import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
 import { HoverBorderGradient } from "../ProjectSection/hover-border-gradient";
 
-export const ProjectCard = ({
-  title,
-  description,
-  image,
-  tech = [],
-  link,
-  className,
-}) => {
+export const ProjectCard = ({ project }) => {
+  const { id, created_at, title, description, image, tech = [], preview, github, video, category, className, } = project
+
   return (
     <div className={cn(
       "block rounded-4xl bg-white dark:bg-[#0a0611] dark:border-violet-700 overflow-hidden p-5 shadow-[0_0_10px_#5e0ec08f]",
@@ -32,7 +27,7 @@ export const ProjectCard = ({
       {/* Project Info */}
       <div className="pt-4 sm:pt-6">
         <a
-          href={link || "#"}
+          href={preview || "#"}
           target="_blank"
           className="group inline-flex items-center text-base font-bold"
         >
@@ -58,25 +53,45 @@ export const ProjectCard = ({
 
         {/* Buttons */}
         <div className="flex gap-3 mt-4">
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            className="dark:bg-black group bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-1 text-sm font-medium"
-          >
-            <span>Preview</span>
-            <IconArrowRight
-              className="ml-0 w-0 h-0 group-hover:ml-2 group-hover:h-4 group-hover:w-4 text-violet-500 dark:text-violet-300 transform -rotate-45 translate-x-[-6px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-            />
-          </HoverBorderGradient>
-
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            className="dark:bg-black group bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-1 text-sm font-medium"
-          >
-            <span>GitHub</span>
-            <IconArrowRight
-              className="ml-0 w-0 h-0 group-hover:ml-2 group-hover:h-4 group-hover:w-4 text-violet-500 dark:text-violet-300 transform -rotate-45 translate-x-[-6px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-            />
-          </HoverBorderGradient>
+          {preview &&
+            <a href={preview} target="_blank">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black group bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-1 text-sm font-medium"
+              >
+                <span>Preview</span>
+                <IconArrowRight
+                  className="ml-0 w-0 h-0 group-hover:ml-2 group-hover:h-4 group-hover:w-4 text-violet-500 dark:text-violet-300 transform -rotate-45 translate-x-[-6px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                />
+              </HoverBorderGradient>
+            </a>
+          }
+          {github &&
+            <a href={github} target="_blank">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black group bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-1 text-sm font-medium"
+              >
+                <span>GitHub</span>
+                <IconArrowRight
+                  className="ml-0 w-0 h-0 group-hover:ml-2 group-hover:h-4 group-hover:w-4 text-violet-500 dark:text-violet-300 transform -rotate-45 translate-x-[-6px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                />
+              </HoverBorderGradient>
+            </a>
+          }
+          {video &&
+            <a href={video} target="_blank">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black group bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-1 text-sm font-medium"
+              >
+                <span>Demo</span>
+                <IconArrowRight
+                  className="ml-0 w-0 h-0 group-hover:ml-2 group-hover:h-4 group-hover:w-4 text-violet-500 dark:text-violet-300 transform -rotate-45 translate-x-[-6px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                />
+              </HoverBorderGradient>
+            </a>
+          }
         </div>
       </div>
     </div>
