@@ -3,6 +3,7 @@ import StackSlide from "../StackSlide/StackSlide";
 import Link from "next/link";
 import './AboutHero.css'
 import { IconDownload } from "@tabler/icons-react";
+import Image from "next/image";
 
 function AboutHero() {
     return (
@@ -107,11 +108,15 @@ function AboutHero() {
                         {/* <div className="absolute w-[400px] h-[400px] rounded-full border border-violet-500/40" /> */}
 
                         {/* Profile Image */}
-                        <div className="relative z-10">
-                            <img
+
+                        <div className="relative z-10 w-full h-full overflow-hidden rounded-full">
+                            <Image
                                 src="/israr7.png"
                                 alt="Israr Ahmad"
-                                className="w-full h-full object-cover overfolow-hidden rounded-full"
+                                fill
+                                priority
+                                sizes="(max-width: 640px) 80vw, 300px"
+                                className="object-cover"
                             />
                         </div>
 

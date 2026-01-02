@@ -6,6 +6,7 @@ import { IconHome, IconInfoCircle, IconMenu2, IconX, IconPhoneCall, IconFileText
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa6'
 import { SiFiverr } from "react-icons/si"
 import './Sidebar.css'
+import Image from 'next/image';
 
 export default function Sidebar() {
     const [activeSection, setActiveSection] = useState('/')
@@ -53,11 +54,16 @@ export default function Sidebar() {
             >
                 {/* Profile */}
                 <div className="flex flex-col items-center mb-8">
-                    <img
-                        src="./israr7.png"
-                        alt="Israr's Profile"
-                        className="bg-[#5e0ec042] w-[80%] object-cover rounded-full border-3 border-violet-300 transition-all group-hover/sidebar:border-violet-500"
-                    />
+                    <div className="relative w-[80%] aspect-square">
+                        <Image
+                            src="/israr7.png"
+                            alt="Israr's Profile"
+                            fill
+                            priority
+                            sizes="(max-width: 640px) 80vw, (max-width: 1024px) 300px, 300px"
+                            className="bg-[#5e0ec042] object-cover rounded-full border-3 border-violet-300 transition-all group-hover/sidebar:border-violet-500"
+                        />
+                    </div>
                     <strong className="mt-2 text-2xl">Israr Ahmad Tech</strong>
                 </div>
 

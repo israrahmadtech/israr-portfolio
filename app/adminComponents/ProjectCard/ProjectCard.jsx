@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function ProjectCard({ project, onEdit, onDelete }) {
@@ -8,11 +9,15 @@ export default function ProjectCard({ project, onEdit, onDelete }) {
 
             {/* Top: Image & Info */}
             <div className="flex flex-col gap-4">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-40 object-cover"
-                />
+                <div className="relative w-full h-40 overflow-hidden">
+                    <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                    />
+                </div>
 
                 <div className="flex flex-col gap-1">
                     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">

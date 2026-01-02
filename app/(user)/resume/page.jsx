@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export default function ResumePage() {
   return (
@@ -15,13 +16,19 @@ export default function ResumePage() {
       >
         Download Resume
       </a>
-      
+
       <div className="w-full flex justify-center">
-        <img
-          src="/images/portfolio/IsrarAhmadResumeImage.webp"
-          title="Resume"
-          className="bg-white w-[95%] lg:w-[70%] border shadow-lg"
-        />
+
+        <div className="w-full flex justify-center">
+          <Image
+            src="/IsrarAhmadResumeImage.webp"
+            alt="Resume"
+            width={1200}
+            height={1700}
+            sizes="(max-width: 1024px) 95vw, 70vw"
+            className="bg-white w-[95%] lg:w-[70%] border shadow-lg"
+          />
+        </div>
       </div>
     </div>
   );
