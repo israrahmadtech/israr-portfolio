@@ -1,15 +1,21 @@
+import Image from "next/image";
+
 export default function HighlightCard({ highlight, onEdit, onDelete }) {
     const { title, description, date, image } = highlight;
 
     return (
-        <div className="relative rounded-3xl p-6 border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-transparent backdrop-blur-sm transition-transform duration-300">
+        <div className="relative rounded-3xl p-6 bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm">
             {/* Image */}
             {image && (
-                <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-46 object-cover rounded-xl"
-                />
+                <div className="relative w-full h-46 rounded-md overflow-hidden">
+                    <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                    />
+                </div>
             )}
 
             {/* Title & Icon */}

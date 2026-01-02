@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
 import { HoverBorderGradient } from "../ProjectSection/hover-border-gradient";
+import Image from "next/image";
 
 export const ProjectCard = ({ project }) => {
   const { id, created_at, title, description, image, tech = [], preview, github, video, category, className, } = project
@@ -15,13 +16,15 @@ export const ProjectCard = ({ project }) => {
     )}>
       {/* Project Image */}
       {image && (
-        <img
-          src={image}
-          width={800}
-          height={500}
-          alt={title}
-          className="w-full h-40 sm:h-48 object-cover"
-        />
+        <div className="relative w-full h-40 sm:h-48">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        </div>
       )}
 
       {/* Project Info */}
