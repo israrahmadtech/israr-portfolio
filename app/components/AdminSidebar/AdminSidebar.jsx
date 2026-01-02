@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import {
     IconArrowLeft,
     IconBrandTabler,
+    IconHighlight,
     IconHome,
     IconMail,
     IconMoon,
     IconPhoneCall,
+    IconRocket,
 } from "@tabler/icons-react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/app/components/AdminSidebar/sidebarUI";
 import { useLogout } from "../../CustomHooks/AdminLogout";
@@ -37,6 +39,20 @@ export function AdminSidebar() {
             href: "/admin/emails",
             icon: (
                 <IconMail className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+            ),
+        },
+        {
+            label: "Projects",
+            href: "/admin/projects",
+            icon: (
+                <IconRocket className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+            ),
+        },
+        {
+            label: "Highlights",
+            href: "/admin/highlights",
+            icon: (
+                <IconHighlight className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
             ),
         },
         {
