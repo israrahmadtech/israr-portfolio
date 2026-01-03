@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { IconHome, IconInfoCircle, IconMenu2, IconX, IconPhoneCall, IconFileText, IconRocket } from "@tabler/icons-react";
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa6'
 import { SiFiverr } from "react-icons/si"
+import Image from 'next/image'
 import './Sidebar.css'
-import Image from 'next/image';
 
 export default function Sidebar() {
-    const [activeSection, setActiveSection] = useState('/')
+    const pathname = usePathname()
     const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
     // Example navigation items
@@ -29,26 +30,41 @@ export default function Sidebar() {
         { name: 'SiFiverr', icon: <SiFiverr className='text-2xl md:text-3xl' />, link: "" },
     ]
 
-    // Sidebar Auto Hide on 1620px vw
+    // Sidebar Auto Hide on small screens
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 1654) {
-                setIsSidebarOpen(false);
+                setIsSidebarOpen(false)
             } else {
-                setIsSidebarOpen(true);
+                setIsSidebarOpen(true)
             }
         };
-
-        handleResize(); // page open hotay hi check ho jaye
-
+        handleResize();
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
+
+    // Close sidebar on outside click
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            const sidebar = document.getElementById('sidebar')
+            if (sidebar && !sidebar.contains(e.target) && window.innerWidth <= 1654) {
+                setIsSidebarOpen(false)
+            }
+        }
+
+        if (isSidebarOpen && window.innerWidth <= 1654) {
+            document.addEventListener('click', handleClickOutside)
+        }
+
+        return () => document.removeEventListener('click', handleClickOutside)
+    }, [isSidebarOpen])
 
     return (
         <>
             {/* Sidebar */}
-            <aside id='sidebar'
+            <aside
+                id='sidebar'
                 className={`bg-white dark:bg-[#000] shadow-violet-500 group/sidebar h-screen static w-70 md:w-88 flex flex-col p-5 transform transition-transform duration-500
           ${isSidebarOpen ? 'translate-x-0 shadow-md' : '-translate-x-[100%]'} z-50`}
             >
@@ -74,9 +90,12 @@ export default function Sidebar() {
                             <li key={item.path}>
                                 <Link
                                     href={item.path}
+                                    onClick={() => {
+                                        // Mobile pe click hone par close
+                                        if (window.innerWidth <= 1654) setIsSidebarOpen(false)
+                                    }}
                                     className={`flex items-center text-lg gap-2 px-4 py-2 rounded-full hover:bg-gray-700 hover:text-white transition-all
-                    ${activeSection === item.path && 'bg-violet-800 text-white'}`}
-                                    onClick={() => setActiveSection(item.path)}
+                    ${pathname === item.path ? 'bg-violet-800 text-white' : ''}`}
                                 >
                                     {item.icon}
                                     {item.name}
@@ -90,21 +109,19 @@ export default function Sidebar() {
                 <div className="mt-auto pt-2 border-t border-violet-300">
                     <span className="text-lg text-violet-500">Find With Me</span>
                     <div className="flex justify-center gap-3 mt-2">
-                        {
-                            socialMedia?.map((account, index) => (
-                                <a key={index + "social"} href={account?.link} target="_blank"
-                                    className="w-11 md:w-14 h-11 md:h-14 relative group flex items-center justify-center rounded-full hover:text-white bg-gray-300 dark:bg-gray-700 transition-all">
-                                    <span className='absolute z-10'>{account?.icon}</span>
-                                    <span className='absolute left-0 right-0 w-11 md:w-14 h-11 md:h-14 rounded-full bg-violet-500 z-[1] transform scale-0 transition-transform duration-300 group-hover:scale-100'></span>
-                                </a>
-                            ))
-                        }
+                        {socialMedia?.map((account, index) => (
+                            <a key={index + "social"} href={account?.link} target="_blank"
+                                className="w-11 md:w-14 h-11 md:h-14 relative group flex items-center justify-center rounded-full hover:text-white bg-gray-300 dark:bg-gray-700 transition-all">
+                                <span className='absolute z-10'>{account?.icon}</span>
+                                <span className='absolute left-0 right-0 w-11 md:w-14 h-11 md:h-14 rounded-full bg-violet-500 z-[1] transform scale-0 transition-transform duration-300 group-hover:scale-100'></span>
+                            </a>
+                        ))}
                     </div>
                 </div>
 
                 {/* Hamburger */}
                 <button
-                    className={`ham-burger-btn absolute top-5 bg-gray-200 dark:bg-gray-800 p-2 rounded-md hover:bg-gray-700 hidden ${isSidebarOpen ? 'right-3' : '-right-13'}`}
+                    className={`ham-burger-btn absolute top-5 bg-gray-200 dark:bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-all ${isSidebarOpen ? 'right-3' : '-right-13'}`}
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                 >
                     {isSidebarOpen ? <IconX className="w-6 h-6" /> : <IconMenu2 className="w-6 h-6" />}

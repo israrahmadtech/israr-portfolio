@@ -1,10 +1,15 @@
+#sidebar .ham-burger-btn {
+    display: none;
+}
+
 @media (max-width: 1654px) {
-    #sidebar{
+    #sidebar {
         position: fixed;
         top: 0;
         left: 0;
     }
-    #sidebar .ham-burger-btn{
+
+    #sidebar .ham-burger-btn {
         display: inline-block;
     }
 }

@@ -8,15 +8,19 @@ import Image from "next/image";
 
 export const ProjectCard = ({ project }) => {
   const { id, created_at, title, description, image, tech = [], preview, github, video, category, className, } = project
+  const [showFullDesc, setShowFullDesc] = React.useState(false);
+
+  const MAX_CHARS = 110;
+  const shortDesc = description.slice(0, MAX_CHARS);
 
   return (
     <div className={cn(
-      "block rounded-4xl bg-white dark:bg-[#0a0611] dark:border-violet-700 overflow-hidden p-5 shadow-[0_0_10px_#5e0ec08f]",
+      "block rounded-4xl bg-white dark:bg-[#0a0611] dark:border-violet-700 overflow-hidden p-5 shadow-[0_0_10px_#5e0ec08f] flex flex-col h-full",
       className
     )}>
       {/* Project Image */}
       {image && (
-        <div className="relative w-full h-40 sm:h-48">
+        <div className="relative w-full h-40 sm:h-58 flex-shrink-0">
           <Image
             src={project.image}
             alt={project.title}
@@ -28,7 +32,7 @@ export const ProjectCard = ({ project }) => {
       )}
 
       {/* Project Info */}
-      <div className="pt-4 sm:pt-6">
+      <div className="pt-4 sm:pt-6 flex flex-col flex-grow">
         <a
           href={preview || "#"}
           target="_blank"
@@ -39,7 +43,15 @@ export const ProjectCard = ({ project }) => {
         </a>
 
         <p className="mt-2 text-sm text-neutral-700 dark:text-violet-200">
-          {description}
+          {showFullDesc ? description : shortDesc + "..."}
+          {description.length > MAX_CHARS && (
+            <button
+              onClick={() => setShowFullDesc(!showFullDesc)}
+              className="text-violet-600 dark:text-violet-500 ml-1 text-sm font-medium"
+            >
+              {showFullDesc ? "less" : "more"}
+            </button>
+          )}
         </p>
 
         {/* Tech stack badges */}
@@ -55,7 +67,7 @@ export const ProjectCard = ({ project }) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 mt-4">
+        <div className="flex gap-3 mt-auto pt-4">
           {preview &&
             <a href={preview} target="_blank">
               <HoverBorderGradient
@@ -98,5 +110,6 @@ export const ProjectCard = ({ project }) => {
         </div>
       </div>
     </div>
+
   );
 };
