@@ -6,6 +6,17 @@ export default function ResumePage() {
       id="resume"
       className="w-full py-20 flex flex-col items-center gap-4 min-h-[52vh]"
     >
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+        My{" "}
+        <span className="relative inline-block text-violet-500">
+          Resume
+          <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-violet-500/40 rounded-full" />
+        </span>
+      </h2>
+      <p className="text-center mb-3 max-w-2xl mx-auto text-violet-500 dark:text-violet-300">
+        A concise overview of my professional experience, skills, and accomplishments. This section highlights my work, projects, and milestones that demonstrate my growth and expertise in web development.
+      </p>
+      
       {/* Download Button */}
       <a
         href="/IsrarAhmadResume.pdf"

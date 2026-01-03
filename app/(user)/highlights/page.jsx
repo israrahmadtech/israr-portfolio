@@ -7,12 +7,15 @@ export default async function Highlights() {
     return (
         <section id="highlights" className="w-full py-20">
             <div className="container mx-auto sm:px-4">
-                {/* Heading */}
-                <h2 className="text-violet-500 font-semibold text-lg inline-block border-s-2 border-violet-500 ps-2 leading-6">
-                    HIGHLIGHTS
+                <h2 className="text-center pb-5 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+                    My{" "}
+                    <span className="relative inline-block text-violet-500">
+                        Highlights
+                        <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-violet-500/40 rounded-full" />
+                    </span>
                 </h2>
-                <p className="text-violet-400 dark:text-violet-300 mt-2 text-sm max-w-md">
-                    A curated collection of my top achievements, events, and experiences.
+                <p className="text-center max-w-2xl mx-auto text-violet-500 dark:text-violet-300">
+                    A curated collection of my top achievements, events, and experiences. Here you will find highlights of my projects, hackathons, workshops, and other milestones that showcase my growth and skills in web development and beyond.
                 </p>
 
                 {/* Cards Grid */}
