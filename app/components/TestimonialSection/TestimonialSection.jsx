@@ -11,7 +11,7 @@ export function TestimonialSection() {
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="right"
-                    speed="slower"
+                    speed="normal"
                 />
             </div>
         </section>
@@ -21,17 +21,17 @@ export function TestimonialSection() {
 const testimonials = [
     {
         quote:
-            "Israr delivered exactly what we needed. Clean UI, smooth interactions, and pixel-perfect implementation. Communication was clear and deadlines were met without compromise.",
-        name: "Ahmed Raza",
-        title: "Startup Founder",
-        image: "/israr7.png",
+            "I, owner of Shark Nutrition, had the pleasure of working with Israr Ahmad to build my brand's website, and the outcome was exceptional. His professionalism, work ethic, and attention to detail truly stood out. Israr was a great communicator, and his ability to understand my vision and needs made the entire process seamless. He delivered quality work on time, and I appreciate how he kept me in the loop throughout the project. If you're looking for a reliable and skilled web developer, I highly recommend Israr Ahmad. He's a true professional with a keen eye for design and functionality.",
+        name: "Gohar Zaman",
+        title: "Shark Nutrition Owner",
+        image: "",
     },
     {
         quote:
             "Outstanding work. Building everything from scratch without following tutorials truly stands out. This is not just a demo project — it includes authentication, cart functionality, protected routes, a full admin panel, and a fully responsive UI. Overall, it’s one of the best demo web applications I’ve seen.",
         name: "Rafi Ullah",
         title: "Frontend Developer",
-        image: "/israr7.png",
+        image: "/testimonial02.jpg",
     },
     {
         quote:
@@ -47,11 +47,11 @@ const testimonials = [
         title: "Full Stack Dev",
         image: "/testimonial04.jpg",
     },
-    {
-        quote:
-            "Fast, focused, and very skilled. Israr’s attention to detail and clean code made a huge difference in our product quality.",
-        name: "Saad Khan",
-        title: "SaaS Founder",
-        image: "/israr7.png",
-    },
+    // {
+    //     quote:
+    //         "Fast, focused, and very skilled. Israr’s attention to detail and clean code made a huge difference in our product quality.",
+    //     name: "Saad Khan",
+    //     title: "SaaS Founder",
+    //     image: "/israr7.png",
+    // },
 ];

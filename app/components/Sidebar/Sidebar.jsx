@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { IconHome, IconInfoCircle, IconMenu2, IconX, IconPhoneCall, IconFileText, IconRocket } from "@tabler/icons-react";
+import { IconHome, IconInfoCircle, IconMenu2, IconX, IconPhoneCall, IconFileText, IconRocket, IconMail } from "@tabler/icons-react";
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa6'
-import { SiFiverr } from "react-icons/si"
 import Image from 'next/image'
 import './Sidebar.css'
 
@@ -24,10 +23,10 @@ export default function Sidebar() {
     ]
 
     const socialMedia = [
-        { name: 'Linkedin', icon: <FaLinkedin className='text-2xl md:text-3xl' />, link: "" },
-        { name: 'Github', icon: <FaGithub className='text-2xl md:text-3xl' />, link: "" },
-        { name: 'Whatsapp', icon: <FaWhatsapp className='text-2xl md:text-3xl' />, link: "" },
-        { name: 'SiFiverr', icon: <SiFiverr className='text-2xl md:text-3xl' />, link: "" },
+        { name: 'Linkedin', icon: <FaLinkedin className='text-2xl md:text-3xl' />, link: "linkedin.com/in/israr-ahmad-tech-30953b33a/" },
+        { name: 'Github', icon: <FaGithub className='text-2xl md:text-3xl' />, link: "https://github.com/israrahmadtech" },
+        { name: 'Whatsapp', icon: <FaWhatsapp className='text-2xl md:text-3xl' />, link: "https://wa.me/+923558335803" },
+        { name: 'SiFiverr', icon: <IconMail className='text-2xl md:text-3xl' />, link: "mailto:israrahmadtech@gmail.com" },
     ]
 
     // Sidebar Auto Hide on small screens

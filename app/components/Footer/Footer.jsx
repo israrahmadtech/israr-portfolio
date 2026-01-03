@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
     IconBrandGithub,
     IconBrandLinkedin,
-    IconBrandTwitter,
+    IconBrandWhatsapp,
     IconMail,
 } from "@tabler/icons-react";
 
@@ -51,10 +51,10 @@ export default function Footer() {
                             </h4>
                             <ul className="mt-4 space-y-3 text-sm">
                                 {[
-                                    { icon: <IconBrandGithub size={18} />, label: "GitHub", href: "https://github.com/" },
-                                    { icon: <IconBrandLinkedin size={18} />, label: "LinkedIn", href: "https://linkedin.com/" },
-                                    { icon: <IconBrandTwitter size={18} />, label: "Twitter", href: "https://twitter.com/" },
-                                    { icon: <IconMail size={18} />, label: "Email", href: "mailto:youremail@gmail.com" },
+                                    { icon: <IconBrandGithub size={18} />, label: "GitHub", href: "https://github.com/israrahmadtech" },
+                                    { icon: <IconBrandLinkedin size={18} />, label: "LinkedIn", href: "linkedin.com/in/israr-ahmad-tech-30953b33a/" },
+                                    { icon: <IconBrandWhatsapp size={18} />, label: "WhatsApp", href: "https://wa.me/+923558335803" },
+                                    { icon: <IconMail size={18} />, label: "Email", href: "mailto:israrahmadtech@gmail.com" },
                                 ].map((social) => (
                                     <li
                                         key={social.label}

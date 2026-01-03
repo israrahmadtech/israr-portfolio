@@ -1,7 +1,28 @@
 "use client"
 import { useRealtimeData } from "@/app/CustomHooks/RealtimeData";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Dashboard() {
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        async function fetchProjects() {
+            try {
+                const res = await fetch(`/api/projects`);
+                const data = await res.json();
+
+                if (data.success) {
+                    setProjects(data.data);
+                } else {
+                    setError(data.message || "Failed to fetch projects");
+                }
+            } catch (err) {
+                toast.error("Something went wrong")
+            }
+        }
+
+        fetchProjects();
+    }, []);
 
     const {
         data: contacts,
@@ -14,10 +35,10 @@ export default function Dashboard() {
     } = useRealtimeData({ tableName: "emails", showToast: true });
 
     const stats = [
-        {id: 1, title: "Contacts", totalCount: contactsFullResponse?.totalContacts, desc: "Messages from contact form"},
-        {id: 2, title: "Newsletter Subscribers", totalCount: emailsFullResponse?.totalEmails, desc: "Email Subscribers"},
-        { id: 3, title: "Projects Completed", totalCount: 20, desc: "Web & app projects I've built" },
-        {id: 4, title: "Tech Stack", totalCount: 8, desc: "Technologies & tools I work with"},
+        { id: 1, title: "Contacts", totalCount: contactsFullResponse?.totalContacts, desc: "Messages from contact form" },
+        { id: 2, title: "Newsletter Subscribers", totalCount: emailsFullResponse?.totalEmails, desc: "Email Subscribers" },
+        { id: 3, title: "Projects Completed", totalCount: projects?.length, desc: "Web & app projects I've built" },
+        { id: 4, title: "Tech Stack", totalCount: 8, desc: "Technologies & tools I work with" },
     ]
 
     return (
