@@ -103,7 +103,7 @@ export default function ContactSection() {
                                         Email
                                     </p>
                                     <p className="text-md text-zinc-600 dark:text-gray-400">
-                                        israr.ahmad@example.com
+                                        israrahmadtech@gmail.com
                                     </p>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ export default function ContactSection() {
                                         Phone
                                     </p>
                                     <p className="text-md text-zinc-600 dark:text-gray-400">
-                                        +92 300 1234567
+                                        +92 335 8335803
                                     </p>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ export default function ContactSection() {
                                         Location
                                     </p>
                                     <p className="text-md text-zinc-600 dark:text-gray-400">
-                                        Karachi, Pakistan
+                                        Peshawar, Pakistan
                                     </p>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ export default function ContactSection() {
                                         LinkedIn
                                     </p>
                                     <p className="text-md text-zinc-600 dark:text-gray-400">
-                                        linkedin.com/in/israr-ahmad
+                                        linkedin.com/in/israr-ahmad-tech-30953b33a/
                                     </p>
                                 </div>
                             </div>

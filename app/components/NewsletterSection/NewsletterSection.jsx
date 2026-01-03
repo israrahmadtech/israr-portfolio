@@ -1,4 +1,5 @@
 "use client";
+import { IconMail } from "@tabler/icons-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
@@ -85,21 +86,21 @@ export default function NewsletterSection() {
                             Follow me on my social media accounts to stay updated.
                         </p>
                         <div className="flex gap-4 mt-4">
-                            <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer"
+                            <a href="https://wa.me/+923558335803" target="_blank" rel="noreferrer"
                                 className="p-3 rounded-lg bg-gradient-to-br from-green-400 to-green-600 text-white hover:scale-110 transition-transform">
                                 <FaWhatsapp size={20} />
                             </a>
-                            <a href="https://linkedin.com/in/israr-ahmad" target="_blank" rel="noreferrer"
+                            <a href="linkedin.com/in/israr-ahmad-tech-30953b33a/" target="_blank" rel="noreferrer"
                                 className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white hover:scale-110 transition-transform">
                                 <FaLinkedin size={20} />
                             </a>
-                            <a href="https://github.com/israrahmad" target="_blank" rel="noreferrer"
+                            <a href="https://github.com/israrahmadtech" target="_blank" rel="noreferrer"
                                 className="p-3 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 text-white hover:scale-110 transition-transform">
                                 <FaGithub size={20} />
                             </a>
-                            <a href="https://twitter.com/israrahmad" target="_blank" rel="noreferrer"
+                            <a href="mailto:israrahmadtech@gmail.com" rel="noreferrer"
                                 className="p-3 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 text-white hover:scale-110 transition-transform">
-                                <FaTwitter size={20} />
+                                <IconMail size={20} />
                             </a>
                         </div>
                     </div>

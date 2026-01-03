@@ -4,6 +4,7 @@ import { JourneySection } from "../../components/JourneySection/JourneySection";
 import { SkillsSection } from "../../components/SkillsSection/SkillsSection";
 import AchievmentsSection from "../../components/AchievmentsSection/AchievmentsSection";
 import CallToAction from "../../components/CTA/CTA";
+import StrengthsSection from "@/app/components/StrengthsSection/StrengthsSection";
 
 function About() {
   return (
@@ -17,6 +18,9 @@ function About() {
       </div>
       <div className="container">
         <AchievmentsSection/>
+      </div>
+      <div className="container">
+        <StrengthsSection/>
       </div>
       <CallToAction/>
     </div>

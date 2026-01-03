@@ -6,7 +6,7 @@ import { FaProjectDiagram, FaUsers, FaAward, FaLaptopCode, FaPlus } from "react-
 const achievements = [
     { icon: <FaProjectDiagram size={28} />, title: "Projects Completed", value: 20 },
     { icon: <FaUsers size={28} />, title: "Team Members Led", value: 13 },
-    { icon: <FaAward size={28} />, title: "Awards & Recognition", value: 5 },
+    { icon: <FaAward size={28} />, title: "Top Performer", value: "Top 3 – SMIT" },
     { icon: <FaLaptopCode size={28} />, title: "Years of Coding", value: 3 },
 ];
 
@@ -36,11 +36,20 @@ export default function AchievmentsSection() {
                 {achievements.map((item, index) => (
                     <div
                         key={index}
-                        className="relative flex flex-col items-center justify-center space-y-3 rounded-xl border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-transparent p-6 backdrop-blur-sm shadow-lg hover:shadow-xl transition duration-300"
+                        className="relative flex flex-col items-center justify-center space-y-3 p-6 rounded-xl bg-gradient-to-br from-violet-500/30 to-transparent border border-violet-500/40 backdrop-blur-sm"
                     >
                         <div className="text-violet-500">{item.icon}</div>
-                        <div className="flex items-center">
-                            <Counter value={item.value} /><FaPlus className="text-violet-400" size={15} />
+                        <div className="flex items-center gap-1">
+                            {typeof item.value === "number" ? (
+                                <>
+                                    <Counter value={item.value} />
+                                    <FaPlus className="text-violet-400" size={15} />
+                                </>
+                            ) : (
+                                <span className="text-lg md:text-xl font-bold text-violet-400">
+                                    {item.value}
+                                </span>
+                            )}
                         </div>
                         <p className="text-sm text-zinc-600 dark:text-zinc-300 text-center">{item.title}</p>
                     </div>

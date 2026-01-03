@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { FaUser } from "react-icons/fa";
 
 export const InfiniteMovingCards = ({
   items,
@@ -86,11 +87,17 @@ export const InfiniteMovingCards = ({
                     {item?.title}
                   </span>
                 </span>
-                <img
-                  src={item?.image}
-                  alt={item?.name}
-                  className="h-13 w-13 rounded-full object-cover border border-white/10"
-                />
+                <div className="h-13 w-13 rounded-full border border-white/10 overflow-hidden flex items-center justify-center bg-violet-500/10">
+                  {item?.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.name || "User"}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <FaUser className="text-white/70 w-5 h-5" />
+                  )}
+                </div>
               </div>
             </blockquote>
           </li>

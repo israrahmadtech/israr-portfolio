@@ -13,7 +13,7 @@ export default function ResumePage() {
           <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-violet-500/40 rounded-full" />
         </span>
       </h2>
-      <p className="text-center mb-3 max-w-2xl mx-auto text-violet-500 dark:text-violet-300">
+      <p className="text-center mb-3 max-w-2xl px-2 mx-auto text-violet-500 dark:text-violet-300">
         A concise overview of my professional experience, skills, and accomplishments. This section highlights my work, projects, and milestones that demonstrate my growth and expertise in web development.
       </p>
       

@@ -195,9 +195,10 @@ export default function ProjectModal({ open, onClose, project, onSave }) {
                         onChange={handleChange}
                         className="w-full p-3 rounded-lg outline-none bg-gradient-to-br from-violet-500/20 to-transparent border border-violet-500/30 backdrop-blur-sm focus:border-violet-500/70"
                     >
-                        <option value="Featured" className="text-zinc-900 dark:text-black">Featured</option>
-                        <option value="Core" className="text-zinc-900 dark:text-black">Core</option>
-                        <option value="Learning" className="text-zinc-900 dark:text-black">Learning</option>
+                        <option value="Top" className="text-zinc-900 dark:text-black">Top</option>
+                        <option value="Advance" className="text-zinc-900 dark:text-black">Advance</option>
+                        <option value="Intermediate" className="text-zinc-900 dark:text-black">Intermediate</option>
+                        <option value="Beginner" className="text-zinc-900 dark:text-black">Beginner</option>
                     </select>
 
                     <input

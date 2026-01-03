@@ -8,6 +8,7 @@ import {
     IconBrandSupabase,
     IconBrandGit,
     IconBrandVercel,
+    IconBrandHtml5,
 } from "@tabler/icons-react";
 
 export function TechStackSection() {
@@ -48,6 +49,11 @@ export const projects = [
         title: "TypeScript",
         description: "Type-safe JavaScript for scalable and maintainable codebases.",
         icon: <IconBrandTypescript className="h-6 w-6 text-violet-400" />,
+    },
+    {
+        title: "HTML, CSS & Bootstrap",
+        description: "Much exprerience in HTML, CSS & Bootstrap.",
+        icon: <IconBrandHtml5 className="h-6 w-6 text-violet-400" />,
     },
     {
         title: "Supabase",
