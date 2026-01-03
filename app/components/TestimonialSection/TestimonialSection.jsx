@@ -24,7 +24,7 @@ const testimonials = [
             "I, owner of Shark Nutrition, had the pleasure of working with Israr Ahmad to build my brand's website, and the outcome was exceptional. His professionalism, work ethic, and attention to detail truly stood out. Israr was a great communicator, and his ability to understand my vision and needs made the entire process seamless. He delivered quality work on time, and I appreciate how he kept me in the loop throughout the project. If you're looking for a reliable and skilled web developer, I highly recommend Israr Ahmad. He's a true professional with a keen eye for design and functionality.",
         name: "Gohar Zaman",
         title: "Shark Nutrition Owner",
-        image: "",
+        image: "/GoharZamanImg.jpeg",
     },
     {
         quote:

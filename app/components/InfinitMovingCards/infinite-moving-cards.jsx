@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
@@ -87,12 +88,14 @@ export const InfiniteMovingCards = ({
                     {item?.title}
                   </span>
                 </span>
-                <div className="h-13 w-13 rounded-full border border-white/10 overflow-hidden flex items-center justify-center bg-violet-500/10">
+                <div className="relative h-13 w-13 rounded-full border border-white/10 overflow-hidden flex items-center justify-center bg-violet-500/10">
                   {item?.image ? (
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name || "User"}
-                      className="h-full w-full object-cover"
+                      fill
+                      sizes="100%, 100%"
+                      className="object-cover"
                     />
                   ) : (
                     <FaUser className="text-white/70 w-5 h-5" />
