@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import HighlightCard from "../../components/HighlightCard/HighlightCard";
 import { getItems } from "@/services/dbService"; // yahan se data fetch ho raha
 

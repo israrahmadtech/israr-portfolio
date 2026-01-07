@@ -57,7 +57,11 @@ export default function AdminProjects() {
     return (
         <div className="p-6">
             {/* Header */}
-            <h1 className="text-3xl font-bold mb-2">Admin Projects</h1>
+            <h1 className="text-3xl font-bold mb-2 relative">Admin Projects
+                <span className="text-sm md:text-base font-semibold px-2 py-0.5 rounded-full bg-violet-500/15 text-violet-500 relative -top-5">
+                    {projects?.length}
+                </span>
+            </h1>
             <div className="mb-6 flex">
                 <button
                     onClick={handleAdd}
