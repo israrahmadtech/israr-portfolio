@@ -1,6 +1,6 @@
+export const dynamic = "force-dynamic";
 import { IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
-import React from 'react'
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { HoverBorderGradient } from './hover-border-gradient';
 import { getProjects } from '@/services/projects';

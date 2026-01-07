@@ -1,4 +1,4 @@
-import React from 'react'
+export const dynamic = "force-dynamic";
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { getProjects } from '@/services/projects';
 

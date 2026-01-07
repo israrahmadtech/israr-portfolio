@@ -37,8 +37,8 @@ export default function AdminLogin() {
             }
 
             toast.success("Welcome Admin 👋");
+            router.refresh();
             router.push("/admin/dashboard");
-
         } catch (err) {
             toast.error(err.message);
         } finally {
